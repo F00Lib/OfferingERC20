@@ -16,11 +16,11 @@ export default function Home(){
   //walletconnected keeps track of whether the user's wallet is connected
   const [walletConnected,setWalletConnected] = useState(false);
   //loading is set to true when we're waiting for a transaction
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(false);
   //keeps track of the number of tokens that can be claimed
   //based on the crypto dev nft held by the user
   const [tokensToBeClaimed, setTokensToBeClaimed] = useState(zero);
-  //keeps track of the number of nft owned by an address
+  //keeps track of the number of nft owned by an addLress
   const [balanceOfCryptoDevs, setBalanceOfCryptoDevs] = useState(zero);
   //amount of the tokens that the user want to mint
   const [tokenAmount,setTokenAmount] = useState(zero);
@@ -100,7 +100,7 @@ export default function Home(){
       // call the balanceOf from the token contract to get the number of tokens held by the user
       const balance = await tokenContract.balanceOf(address);
       // balance is already a big number, so we dont need to convert it before setting it
-      setBalanceOfCryptoDevTokens(balance);
+      setBalanceOfCryptoDevs(balance);
     } catch (err) {
       console.error(err);
       setBalanceOfCryptoDevs(zero);
