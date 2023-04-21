@@ -12,7 +12,7 @@ contract CryptoERC20 is ERC20, Ownable{
     //each NFT would give the user 10 tokens
     uint256 public constant tokensPerNFT = 10*10**18;
     //max total supply
-    uint256 public constant maxTotalSupply = 10000*10*18;
+    uint256 public constant maxTotalSupply = 10000*10**18;
     
     ICryptoDevs CrypDevsNFT;
     //mapping to keep track of which tokenids have been claimed
